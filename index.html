@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="NGI Group — Nithin Global Innovations. A multi-venture technology ecosystem building across AI, automation, software, robotics, education, media and future technology.">
+<meta property="og:title" content="NGI Group — Nithin Global Innovations">
+<meta property="og:description" content="18 ventures. One ecosystem. Building the next generation.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#05050a">
+<title>NGI Group — Nithin Global Innovations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#050914;--bg2:#070d19;--panel:rgba(255,255,255,.035);--panel2:rgba(9,14,25,.86);
+  --line:rgba(255,255,255,.075);--line2:rgba(99,102,241,.28);
+  --indigo:#6366f1;--purple:#8b5cf6;--cyan:#22d3ee;--green:#34d399;
+  --amber:#f59e0b;--red:#fb7185;--text:#f8fafc;--muted:#94a3b8;--muted2:#64748b;
+  --max:1240px;--r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:
+  radial-gradient(circle at 10% -5%,rgba(99,102,241,.14),transparent 30%),
+  radial-gradient(circle at 92% 8%,rgba(34,211,238,.08),transparent 25%),
+  linear-gradient(135deg,#0b1220 0%,#050914 46%,#03050b 100%);
+  line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.25;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,#000,transparent 90%);
+}
+body:after{
+  content:"";position:fixed;right:-15vw;bottom:-18vw;width:55vw;height:55vw;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle,rgba(139,92,246,.09),transparent 65%);
+}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+.hidden{display:none!important}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Top announcement */
+.ticker{
+  position:sticky;top:0;z-index:60;padding:8px 0;
+  background:linear-gradient(90deg,#11164a,#29236d,#11164a);
+  border-bottom:1px solid rgba(139,92,246,.25);overflow:hidden;white-space:nowrap
+}
+.ticker-track{display:inline-block;min-width:100%;animation:ticker 26s linear infinite;font-size:10px;letter-spacing:1.3px;font-weight:800;color:#c7d2fe;text-transform:uppercase}
+@keyframes ticker{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* Nav */
+.navbar{
+  position:sticky;top:33px;z-index:55;background:rgba(5,9,20,.78);
+  backdrop-filter:blur(17px);border-bottom:1px solid var(--line)
+}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Orbitron,sans-serif;font-weight:900;letter-spacing:2px}
+.logo-icon{
+  padding:5px 11px;border-radius:9px;background:linear-gradient(135deg,var(--indigo),var(--purple));
+  box-shadow:0 0 24px rgba(99,102,241,.4)
+}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;transition:.2s}
+.nav-links a:hover{color:#fff}
+.nav-actions{display:flex;gap:8px}
+.nav-btn{
+  border:1px solid var(--line2);background:rgba(99,102,241,.08);color:#dbeafe;
+  padding:9px 12px;border-radius:9px;font-size:10px;font-weight:800;letter-spacing:.7px
+}
+.menu{display:none}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:135px 0 95px;text-align:center;border-bottom:1px solid var(--line)}
+.hero-orb{
+  position:absolute;left:50%;top:53%;width:820px;height:820px;transform:translate(-50%,-50%);
+  border:1px solid rgba(99,102,241,.08);border-radius:50%;
+  box-shadow:0 0 120px rgba(99,102,241,.06) inset
+}
+.hero-orb:before,.hero-orb:after{
+  content:"";position:absolute;left:50%;top:50%;border:1px solid rgba(34,211,238,.075);border-radius:50%;transform:translate(-50%,-50%)
+}
+.hero-orb:before{width:620px;height:620px}.hero-orb:after{width:420px;height:420px}
+.hero-inner{position:relative;z-index:1}
+.badge{
+  display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid rgba(99,102,241,.35);
+  border-radius:999px;background:rgba(99,102,241,.09);color:#c4b5fd;font-size:10px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase
+}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px rgba(52,211,153,.6)}
+.hero h1{
+  margin:23px auto 18px;max-width:1050px;font-family:Orbitron,sans-serif;font-size:clamp(48px,8vw,86px);
+  line-height:1.02;letter-spacing:-3.8px
+}
+.gradient-text{
+  background:linear-gradient(110deg,#fff 0%,#c4b5fd 35%,#67e8f9 66%,#fff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero p{max-width:780px;margin:0 auto;color:var(--muted);font-size:16px;line-height:1.8}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:27px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:10px;
+  font-size:11px;font-weight:900;letter-spacing:.7px;transition:.22s
+}
+.btn-primary{border:1px solid transparent;color:#fff;background:linear-gradient(120deg,var(--indigo),var(--purple));box-shadow:0 14px 30px rgba(99,102,241,.25)}
+.btn-primary:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.btn-secondary{border:1px solid var(--line2);background:rgba(255,255,255,.025);color:#dbe4ee}
+.btn-secondary:hover{transform:translateY(-3px);border-color:rgba(34,211,238,.28)}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);width:min(600px,100%);margin:48px auto 0;
+  border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.018)
+}
+.hero-stats div{padding:17px;border-right:1px solid var(--line)}
+.hero-stats div:last-child{border-right:0}
+.hero-stats strong{display:block;font-size:23px}.hero-stats span{display:block;color:var(--muted2);font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+
+/* Sections */
+.section{padding:100px 0;border-bottom:1px solid var(--line)}
+.section-head{text-align:center;max-width:780px;margin:0 auto 46px}
+.section-kicker{color:#a5b4fc;font-size:10px;font-weight:800;letter-spacing:1.9px;text-transform:uppercase}
+.section h2{font-size:clamp(30px,4vw,48px);letter-spacing:-1.8px;line-height:1.08;margin:9px 0 12px;font-family:Orbitron,sans-serif}
+.section-head p{margin:0;color:var(--muted);font-size:13px}
+
+/* Core capabilities */
+.core-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.core-card{
+  padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel);
+  transition:.25s;min-height:210px
+}
+.core-card:hover{transform:translateY(-5px);border-color:rgba(99,102,241,.28);box-shadow:0 18px 40px rgba(0,0,0,.24)}
+.icon{
+  width:40px;height:40px;display:grid;place-items:center;border-radius:11px;background:rgba(99,102,241,.11);
+  border:1px solid rgba(99,102,241,.18);color:#c4b5fd;font-size:10px;font-weight:900
+}
+.core-card h3{margin:20px 0 8px;font-size:18px}.core-card p{margin:0;color:#8793a3;font-size:11px;line-height:1.65}
+
+/* Venture section */
+.venture-tools{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:16px}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filter{
+  border:1px solid var(--line);background:rgba(255,255,255,.02);color:#7e8997;padding:7px 10px;border-radius:9px;
+  font-size:9px;font-weight:800;letter-spacing:.6px
+}
+.filter.active,.filter:hover{color:#e0fbff;border-color:rgba(34,211,238,.28);background:rgba(34,211,238,.05)}
+.search{
+  width:min(290px,100%);border:1px solid var(--line);background:#080d17;color:#fff;padding:9px 11px;border-radius:10px;
+  outline:none;font-size:10px
+}
+.search:focus{border-color:rgba(34,211,238,.35)}
+.venture-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.venture{
+  position:relative;min-height:190px;padding:18px;border:1px solid var(--line);border-radius:15px;
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));overflow:hidden;transition:.22s
+}
+.venture:before{
+  content:"";position:absolute;right:-45px;top:-45px;width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,rgba(99,102,241,.13),transparent 70%)
+}
+.venture:hover{transform:translateY(-4px);border-color:rgba(99,102,241,.3)}
+.vtop{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.vnum,.vkind{font-size:9px;font-weight:900;letter-spacing:1px}.vnum{color:#56616d}.vkind{color:#73b6c2;text-transform:uppercase}
+.venture h3{margin:22px 0 7px;font-size:15px;line-height:1.25}
+.venture p{margin:0;color:#7d8794;font-size:10px;line-height:1.5}
+.vlink{position:absolute;left:18px;bottom:16px;color:#a5f3fc;font-size:9px;font-weight:900}
+
+/* log */
+.log-wrap{display:grid;grid-template-columns:1fr 360px;gap:14px}
+.log-panel,.public-note{
+  border:1px solid var(--line);border-radius:18px;background:rgba(5,8,14,.76);overflow:hidden
+}
+.panel-head{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.panel-head strong{font-size:11px;letter-spacing:.9px}.panel-head span{font-size:9px;color:#677583}
+.log-list{height:355px;overflow:auto}
+.log{
+  display:grid;grid-template-columns:74px 9px 1fr;gap:9px;padding:11px 15px;border-bottom:1px solid rgba(255,255,255,.045)
+}
+.log time{font-size:9px;color:#5b6977;font-variant-numeric:tabular-nums}.log i{width:6px;height:6px;margin-top:4px;border-radius:50%;background:var(--cyan);box-shadow:0 0 9px rgba(34,211,238,.45)}
+.log b{font-size:9px;display:block}.log p{font-size:9px;color:#71808d;margin:2px 0 0}
+.public-note{padding:20px}
+.public-note h3{margin:0 0 8px;font-size:16px}.public-note p{margin:0;color:#818c99;font-size:11px;line-height:1.65}
+.public-note .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px}
+.micro{padding:12px;border:1px solid var(--line);border-radius:11px;background:#080c12}
+.micro strong{display:block;font-size:15px}.micro span{color:#697784;font-size:9px;letter-spacing:.7px;text-transform:uppercase}
+.log-controls{display:flex;gap:7px;align-items:center}
+.log-btn{border:1px solid var(--line);background:#080c12;color:#8794a2;border-radius:8px;padding:6px 8px;font-size:9px;font-weight:800}
+
+/* Architecture */
+.arch-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1040px;margin:0 auto}
+.arch-card{padding:25px;border:1px solid var(--line);border-radius:17px;background:var(--panel)}
+.arch-card h3{margin:0 0 8px;font-size:17px}.arch-card p{margin:0;color:#85909f;font-size:11px;line-height:1.7}
+.arch-list{margin-top:19px;display:grid;gap:7px}
+.arch-list div{padding:9px 11px;border-radius:9px;background:rgba(99,102,241,.045);border:1px solid rgba(99,102,241,.12);color:#cbd5e1;font-size:10px}
+
+/* Footer */
+footer{padding:65px 0 36px;background:#02040a;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}
+.footer-title{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#fff;margin:0 0 15px}
+.footer p,.footer a{color:#6f7884;font-size:10px;line-height:1.65}.footer a:hover{color:#c4b5fd}
+.footer-brand{margin-bottom:8px}
+.footer-links{display:grid;gap:7px}
+.footer-bottom{border-top:1px solid var(--line);margin-top:35px;padding-top:18px;color:#4e5660;font-size:9px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+/* Modal */
+.overlay{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:18px;background:rgba(0,0,0,.78);backdrop-filter:blur(14px)}
+.overlay.open{display:grid}
+.modal{width:min(500px,100%);background:#090e17;border:1px solid rgba(99,102,241,.28);border-radius:20px;box-shadow:0 28px 90px rgba(0,0,0,.55);overflow:hidden}
+.modal-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-head strong{font-size:12px}
+.close{border:1px solid var(--line);background:#0c1119;color:#9aabb9;width:31px;height:31px;border-radius:9px}
+.modal-body{padding:19px}.modal-body p{margin:0;color:#7c8895;font-size:10px;line-height:1.65}
+.oauth{display:grid;gap:8px;margin-top:15px}
+.oauth button{padding:10px;border:1px solid var(--line);background:#0d131d;color:#d9e4ee;border-radius:9px;font-size:10px;font-weight:800}
+.oauth button:hover{border-color:rgba(34,211,238,.3)}
+.auth-note{margin-top:10px!important;font-size:9px!important;color:#63717d!important}
+
+/* Back to top */
+#backTop{position:fixed;right:16px;bottom:16px;width:41px;height:41px;border-radius:50%;border:1px solid rgba(34,211,238,.3);background:rgba(7,12,20,.92);color:#a5f3fc;opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s;z-index:58}
+#backTop.show{opacity:1;pointer-events:auto;transform:none}
+
+@media(max-width:1030px){
+  .navlinks{display:none}.menu{display:block}.nav-links.open{position:absolute;left:0;right:0;top:72px;display:flex;flex-direction:column;gap:0;padding:8px 20px 15px;background:#050914;border-bottom:1px solid var(--line)}
+  .nav-links.open a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.035)}
+  .core-grid{grid-template-columns:repeat(2,1fr)}.venture-grid{grid-template-columns:repeat(2,1fr)}
+  .log-wrap{grid-template-columns:1fr}.arch-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .wrap{width:min(var(--max),calc(100% - 24px))}
+  .ticker-track{font-size:9px}.navbar{top:30px}.nav{min-height:66px}
+  .hero{padding:100px 0 80px}.hero h1{font-size:48px;letter-spacing:-3px}.hero p{font-size:13px}
+  .hero-orb{width:600px;height:600px}.hero-orb:before{width:430px;height:430px}.hero-orb:after{width:290px;height:290px}
+  .section{padding:78px 0}.core-grid,.venture-grid,.arch-grid{grid-template-columns:1fr}
+  .venture-tools{align-items:stretch;flex-direction:column}.search{width:100%}
+  .hero-stats{margin-top:35px}.hero-stats strong{font-size:20px}
+  .footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
+}
+
+/* ========= NGI V4 EXPERIENCE LAYER ========= */
+:root{--ease:cubic-bezier(.22,1,.36,1)}
+html{scroll-padding-top:95px}
+body{
+  background:
+    radial-gradient(900px 520px at 15% -8%,rgba(99,102,241,.20),transparent 60%),
+    radial-gradient(700px 480px at 90% 5%,rgba(34,211,238,.12),transparent 60%),
+    radial-gradient(780px 520px at 45% 115%,rgba(139,92,246,.10),transparent 64%),
+    linear-gradient(135deg,#090d17 0%,#04050b 48%,#020308 100%);
+}
+body::after{
+  content:"";position:fixed;inset:-20%;pointer-events:none;z-index:-4;opacity:.12;
+  background:conic-gradient(from 210deg,transparent 0 20%,rgba(99,102,241,.65) 27%,transparent 34% 58%,rgba(34,211,238,.45) 66%,transparent 73%);
+  filter:blur(90px);animation:aurora 18s linear infinite;
+}
+@keyframes aurora{to{transform:rotate(360deg)}}
+#scrollProgress{position:fixed;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.05);z-index:1000}
+#scrollProgress span{display:block;width:var(--read,0%);height:100%;background:linear-gradient(90deg,var(--purple),var(--cyan),var(--green));box-shadow:0 0 18px rgba(34,211,238,.55)}
+.cursor-glow{position:fixed;left:0;top:0;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:0;opacity:0;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(99,102,241,.12),rgba(34,211,238,.05) 34%,transparent 72%);filter:blur(16px);transition:opacity .25s}
+@media(pointer:fine){body:hover .cursor-glow{opacity:1}}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+.navbar{transition:transform .35s var(--ease),opacity .35s ease}
+.navbar.scrolled .nav{background:rgba(3,5,10,.78);box-shadow:0 18px 60px rgba(0,0,0,.30),inset 0 1px rgba(255,255,255,.05)}
+.logo{gap:10px}
+.logo-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;overflow:hidden;position:relative;background:linear-gradient(145deg,rgba(99,102,241,.18),rgba(34,211,238,.10));border:1px solid rgba(255,255,255,.10);box-shadow:0 0 0 1px rgba(99,102,241,.06),0 0 24px rgba(99,102,241,.12)}
+.logo-icon img{width:100%;height:100%;display:block;object-fit:cover}
+.logo-fallback{font-family:Orbitron,sans-serif;font-weight:900;font-size:15px;letter-spacing:-1px;background:linear-gradient(135deg,#fff,#8be8ff 50%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{padding-top:110px}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(circle at 50% 25%,#000 0%,rgba(0,0,0,.85) 44%,transparent 83%)}
+.hero-orb{animation:orbFloat 9s ease-in-out infinite}
+.hero-orb::before,.hero-orb::after{animation:orbPulse 7s ease-in-out infinite}
+@keyframes orbFloat{50%{transform:translateY(-14px) scale(1.02)}}
+@keyframes orbPulse{50%{transform:scale(1.06);opacity:.85}}
+.hero-brandmark{width:86px;height:86px;margin:0 auto 22px;border-radius:25px;overflow:hidden;display:grid;place-items:center;position:relative;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 60px rgba(0,0,0,.38),0 0 50px rgba(99,102,241,.16);animation:brandFloat 5.5s ease-in-out infinite}
+.hero-brandmark img{width:100%;height:100%;object-fit:cover}
+@keyframes brandFloat{50%{transform:translateY(-7px)}}
+.hero .badge{animation:badgePulse 4.5s ease-in-out infinite}
+@keyframes badgePulse{50%{box-shadow:0 0 0 7px rgba(99,102,241,.02),inset 0 0 0 1px rgba(34,211,238,.08)}}
+.hero h1{animation:heroIn 1s var(--ease) both}.hero p{animation:heroIn .95s .08s var(--ease) both}.hero-actions{animation:heroIn .95s .16s var(--ease) both}.hero-stats{animation:heroIn .95s .24s var(--ease) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+.gradient-text{background-size:200% 100%;animation:textSheen 5s ease-in-out infinite}
+@keyframes textSheen{50%{background-position:100% 50%}}
+.btn,.nav-btn,.filter,.vlink,.log-btn{transition:transform .22s var(--ease),box-shadow .22s ease,border-color .22s ease,background .22s ease}
+.btn:hover,.nav-btn:hover,.vlink:hover{transform:translateY(-3px)}
+.btn-primary:hover{box-shadow:0 15px 42px rgba(99,102,241,.28)}
+.btn-secondary:hover{box-shadow:0 15px 42px rgba(255,255,255,.06)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+.core-card,.arch-card,.log-panel,.public-note,.venture{position:relative;overflow:hidden}
+.core-card::before,.arch-card::before,.log-panel::before,.public-note::before,.venture::before{content:"";position:absolute;left:var(--mx,50%);top:var(--my,50%);width:210px;height:210px;transform:translate(-50%,-50%);pointer-events:none;background:radial-gradient(circle,rgba(99,102,241,.12),transparent 70%);opacity:0;transition:opacity .25s}
+.core-card:hover::before,.arch-card:hover::before,.log-panel:hover::before,.public-note:hover::before,.venture:hover::before{opacity:1}
+.venture{transform-style:preserve-3d;will-change:transform;transition:transform .35s var(--ease),border-color .25s ease,box-shadow .35s ease,opacity .35s ease}
+.venture:hover{border-color:rgba(99,102,241,.36);box-shadow:0 28px 70px rgba(0,0,0,.28),0 0 0 1px rgba(99,102,241,.05)}
+.venture .vtop,.venture h3,.venture p,.venture .vlink{transform:translateZ(14px)}
+.section-head h2{letter-spacing:-.045em}
+.system-pulse{margin:30px auto 0;max-width:960px;padding:14px 16px;border:1px solid rgba(255,255,255,.07);border-radius:18px;background:rgba(255,255,255,.025);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.system-pulse .dot{width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 18px rgba(52,211,153,.65);animation:liveDot 1.6s ease-in-out infinite}
+@keyframes liveDot{50%{transform:scale(1.25);opacity:.7}}
+.system-pulse span{color:var(--muted);font-size:11px}.system-pulse b{font-size:11px;letter-spacing:.12em}
+.flow-strip{margin:32px auto 0;max-width:980px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.flow-node{min-height:58px;padding:13px;border-radius:15px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;font-weight:800;letter-spacing:.08em;color:#cbd5e1;position:relative}
+.flow-node:not(:last-child)::after{content:"→";position:absolute;right:-9px;color:#64748b;font-size:14px;z-index:2}
+.nav-links a.active{color:#fff}.nav-links a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:7px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--purple),var(--cyan))}
+@media(max-width:780px){.flow-strip{grid-template-columns:1fr 1fr}.flow-node:not(:last-child)::after{display:none}}
+@media(max-width:520px){.flow-strip{grid-template-columns:1fr}}
+@media(max-width:650px){.hero{padding-top:95px}.hero-brandmark{width:70px;height:70px;border-radius:21px}.hero h1{font-size:46px;letter-spacing:-3px}}
+@media(prefers-reduced-motion:reduce){body::after,.hero-orb,.hero-orb::before,.hero-orb::after,.hero-brandmark,.hero .badge,.gradient-text,.system-pulse .dot{animation:none!important}}
+
+</style>
+</head>
+
+<body>
+<div id="scrollProgress"><span></span></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="noise"></div>
+<div class="ticker"><div class="ticker-track">NGI GROUP • NITHIN GLOBAL INNOVATIONS • AI • AUTOMATION • SOFTWARE • ROBOTICS • EDUCATION • MEDIA • FUTURE TECHNOLOGY • BUILDING WHAT COMES NEXT •</div></div>
+
+<header class="navbar">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="NGI home"><span class="logo-icon"><img src="https://drive.google.com/uc?export=view&id=1Azjzqb1AEQbX1DTcsTjYF5JoWZGG3vnH" alt="NGI logo" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback" style="display:none">NGI</span></span><span>NGI</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#public-log">Log Archive</a>
+      <a href="#architecture">Architecture</a><a href="#links">Links</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-btn" href="https://github.com/veeranithin" target="_blank" rel="noopener" data-event="GitHub opened">NGI GitHub ↗</a>
+      <button class="nav-btn menu" id="menuBtn">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-orb"></div>
+  <div class="wrap hero-inner reveal">
+    <div class="hero-brandmark" aria-label="NGI logo">
+      <img src="https://drive.google.com/uc?export=view&id=1Azjzqb1AEQbX1DTcsTjYF5JoWZGG3vnH" alt="NGI logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <span class="logo-fallback" style="display:none">NGI</span>
+    </div>
+    <div class="badge"><i></i> NITHIN GROUP OF INDUSTRIES</div>
+    <h1>Building the <span class="gradient-text">next generation.</span></h1>
+    <p>
+      NGI is a multi-venture technology ecosystem exploring artificial intelligence,
+      automation, education, robotics, software, media, agriculture, logistics and digital entertainment.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#ventures">Explore 18 ventures</a>
+      <a class="btn btn-secondary" href="https://ngiaio.blogspot.com/" target="_blank" rel="noopener" data-event="NGI Blogger opened">NGI on Blogger ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong data-count="18">18</strong><span>ventures</span></div>
+      <div><strong data-count="1">1</strong><span>ecosystem</span></div>
+      <div><strong>∞</strong><span>frontiers</span></div>
+    </div>
+    <div class="system-pulse"><span class="dot"></span><b>NGI SYSTEM STATUS</b><span>Public surface online · venture registry loaded · live UI events active</span></div>
+    <div class="flow-strip">
+      <div class="flow-node">RESEARCH</div><div class="flow-node">BUILD</div><div class="flow-node">CONNECT</div><div class="flow-node">LAUNCH</div><div class="flow-node">ITERATE</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 01 — About NGI</div>
+      <h2>Many companies. One operating idea.</h2>
+      <p>Independent ventures with a shared technology and experimentation mindset.</p>
+    </div>
+    <div class="core-grid">
+      <article class="core-card reveal"><div class="icon">AI</div><h3>Artificial Intelligence</h3><p>AI development, fine-tuning, automation and new intelligence systems.</p></article>
+      <article class="core-card reveal"><div class="icon">ED</div><h3>Education</h3><p>Learning platforms, materials, mentoring and digital education products.</p></article>
+      <article class="core-card reveal"><div class="icon">RX</div><h3>Robotics & Spatial</h3><p>Robotics, virtual reality and systems that connect software to the physical world.</p></article>
+      <article class="core-card reveal"><div class="icon">MS</div><h3>Media & Entertainment</h3><p>News, films, anime, games and creative technology for a global audience.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ecosystem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 02 — Ecosystem</div>
+      <h2>An ecosystem designed to compound.</h2>
+      <p>Build → experiment → connect → launch → learn → repeat.</p>
+    </div>
+    <div class="arch-grid">
+      <article class="arch-card reveal">
+        <h3>Technology engine</h3>
+        <p>Shared technical thinking across models, developer tools, automation, communications and product infrastructure.</p>
+        <div class="arch-list"><div>Nithin AI / Nithin-ASI</div><div>Nithin LANG / MMN Studio</div><div>N-Meet / VRNA</div></div>
+      </article>
+      <article class="arch-card reveal">
+        <h3>Product engine</h3>
+        <p>Consumer-facing ventures turn experiments into education, media, agriculture, logistics and entertainment experiences.</p>
+        <div class="arch-list"><div>NithinX / N Tution</div><div>Nithin's Voice / Nithin FILMS</div><div>VNN Agro / Nithinesta / VN Foods</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="ventures-section section" id="ventures">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 03 — Ventures</div>
+      <h2>18 ventures. One direction.</h2>
+      <p>Public entry points are shown where available; otherwise the card links to the NGI hub.</p>
+    </div>
+
+    <div class="venture-tools reveal">
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="technology">Technology</button>
+        <button class="filter" data-filter="consumer">Consumer</button>
+        <button class="filter" data-filter="creative">Creative</button>
+      </div>
+      <input class="search" id="ventureSearch" type="search" placeholder="Search ventures..." aria-label="Search ventures">
+    </div>
+
+    <div class="venture-grid" id="ventureGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="activity">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 04 — Public Activity</div>
+      <h2>Everything visible, nothing hidden.</h2>
+      <p>A transparent activity stream showing public site events and interface actions in this browser.</p>
+    </div>
+
+    <div class="log-wrap">
+      <div class="log-panel reveal">
+        <div class="panel-head">
+          <strong>LIVE SITE LOG</strong>
+          <div class="log-controls"><span id="logState">RUNNING</span><button class="log-btn" id="clearLog">CLEAR</button></div>
+        </div>
+        <div class="log-list" id="logList"></div>
+      </div>
+
+      <aside class="public-note reveal">
+        <h3>What this log records</h3>
+        <p>
+          This stream is deliberately transparent. It records events such as page sections opened,
+          filters selected, public links clicked and local UI state changes. It does not identify visitors
+          or send private browsing data to a server.
+        </p>
+        <div class="mini-grid">
+          <div class="micro"><strong id="eventCount">0</strong><span>events</span></div>
+          <div class="micro"><strong>LOCAL</strong><span>storage scope</span></div>
+          <div class="micro"><strong>18</strong><span>ventures</span></div>
+          <div class="micro"><strong>LIVE</strong><span>stream mode</span></div>
+        </div>
+        <div style="margin-top:15px">
+          <button class="log-btn" id="logToggle">PAUSE STREAM</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="public-log">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 05 — NGI Log Archive</div>
+      <h2>Public activity. In one place.</h2>
+      <p>Your shared Google Drive log is surfaced here with a direct fallback link.</p>
+    </div>
+    <div class="log-wrap">
+      <div class="log-panel reveal">
+        <div class="panel-head">
+          <strong>NGI SHARED LOG</strong>
+          <span>GOOGLE DRIVE PREVIEW</span>
+        </div>
+        <div style="padding:0;background:#fff;min-height:420px">
+          <iframe
+            title="NGI shared log preview"
+            src="https://drive.google.com/file/d/1Azjzqb1AEQbX1DTcsTjYF5JoWZGG3vnH/preview"
+            style="width:100%;height:420px;border:0;display:block;background:#fff"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            allow="autoplay">
+          </iframe>
+        </div>
+      </div>
+      <aside class="public-note reveal">
+        <h3>Can't see the preview?</h3>
+        <p>
+          The Drive file must be shared so viewers can access it. Open the original file directly
+          if the embedded preview is blocked by Drive permissions or browser restrictions.
+        </p>
+        <div class="mini-grid">
+          <div class="micro"><strong>DRIVE</strong><span>shared source</span></div>
+          <div class="micro"><strong>PUBLIC</strong><span>site surface</span></div>
+        </div>
+        <div style="margin-top:18px">
+          <a class="btn btn-primary" href="https://drive.google.com/file/d/1Azjzqb1AEQbX1DTcsTjYF5JoWZGG3vnH/view?usp=sharing" target="_blank" rel="noopener">OPEN FULL LOG ↗</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="links">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 06 — Public Links</div>
+      <h2>The NGI network, connected.</h2>
+      <p>Direct public entry points surfaced from your existing NGI site configuration.</p>
+    </div>
+    <div class="core-grid">
+      <article class="core-card reveal"><div class="icon">NX</div><h3>NithinX</h3><p>EdTech and learning products.</p><a class="vlink" style="position:static;display:inline-flex;margin-top:16px" href="https://nithinxed.blogspot.com/" target="_blank" rel="noopener">OPEN ↗</a></article>
+      <article class="core-card reveal"><div class="icon">NV</div><h3>Nithin's Voice</h3><p>Technology news and digital media.</p><a class="vlink" style="position:static;display:inline-flex;margin-top:16px" href="https://nithinsvoicenews.blogspot.com/" target="_blank" rel="noopener">OPEN ↗</a></article>
+      <article class="core-card reveal"><div class="icon">NA</div><h3>Nithin-ASI</h3><p>Advanced AI systems and tokenizer work.</p><a class="vlink" style="position:static;display:inline-flex;margin-top:16px" href="https://nithin-asi.blogspot.com/" target="_blank" rel="noopener">OPEN ↗</a></article>
+      <article class="core-card reveal"><div class="icon">NL</div><h3>Nithin LANG</h3><p>Next-generation programming language.</p><a class="vlink" style="position:static;display:inline-flex;margin-top:16px" href="https://nithinlangngi.blogspot.com/" target="_blank" rel="noopener">OPEN ↗</a></article>
+    </div>
+    <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+      <a class="btn btn-secondary" href="https://ngimeet.blogspot.com/" target="_blank" rel="noopener">N-Meet ↗</a>
+      <a class="btn btn-secondary" href="https://vnnngi.blogspot.com/" target="_blank" rel="noopener">VNN Agro ↗</a>
+      <a class="btn btn-secondary" href="https://vrngi.blogspot.com/" target="_blank" rel="noopener">Vinayaka Robotics ↗</a>
+      <a class="btn btn-secondary" href="https://vrnangi.blogspot.com/" target="_blank" rel="noopener">VRNA ↗</a>
+      <a class="btn btn-secondary" href="https://ngiaio.blogspot.com/" target="_blank" rel="noopener">NGI Blogger Hub ↗</a>
+      <a class="btn btn-secondary" href="https://github.com/veeranithin" target="_blank" rel="noopener">NGI GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="architecture">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker">/ 07 — Architecture</div>
+      <h2>Built for iteration.</h2>
+      <p>Public product layer first. Private infrastructure stays behind authenticated systems.</p>
+    </div>
+    <div class="arch-grid">
+      <article class="arch-card reveal">
+        <h3>Public layer</h3>
+        <p>Fast static experience with direct links to products, repositories, announcements and public information.</p>
+        <div class="arch-list"><div>GitHub-ready static deployment</div><div>Blogger / product links</div><div>Responsive front end</div></div>
+      </article>
+      <article class="arch-card reveal">
+        <h3>Authenticated layer</h3>
+        <p>Separate services can handle accounts, private workspaces and application data. Keep secrets off the public site.</p>
+        <div class="arch-list"><div>Appwrite / Supabase compatible</div><div>Server-side secrets only</div><div>Least-privilege access model</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:80px;padding-bottom:80px">
+  <div class="wrap reveal" style="max-width:950px;text-align:center">
+    <div class="section-kicker">/ 08 — Manifesto</div>
+    <h2 style="font-size:clamp(34px,5vw,60px);margin-top:13px">We don't wait for the future to arrive. We build toward it.</h2>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo footer-brand"><span class="logo-icon"><img src="https://drive.google.com/uc?export=view&id=1Azjzqb1AEQbX1DTcsTjYF5JoWZGG3vnH" alt="NGI logo" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback" style="display:none">NGI</span></span><span>NGI</span></div>
+      <p>Nithin Group of Industries — a technology ecosystem exploring ambitious products across multiple frontiers.</p>
+    </div>
+    <div>
+      <div class="footer-title">Public Links</div>
+      <div class="footer-links">
+        <a href="https://github.com/veeranithin" target="_blank" rel="noopener">NGI GitHub ↗</a>
+        <a href="https://ngiaio.blogspot.com/" target="_blank" rel="noopener">NGI Blogger ↗</a>
+        <a href="https://nithinxed.blogspot.com/" target="_blank" rel="noopener">NithinX ↗</a>
+        <a href="https://nithinsvoicenews.blogspot.com/" target="_blank" rel="noopener">Nithin's Voice ↗</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Selected Ventures</div>
+      <div class="footer-links">
+        <a href="https://nithin-asi.blogspot.com/" target="_blank" rel="noopener">Nithin-ASI ↗</a>
+        <a href="https://nithinlangngi.blogspot.com/" target="_blank" rel="noopener">Nithin LANG ↗</a>
+        <a href="https://ngimeet.blogspot.com/" target="_blank" rel="noopener">N-Meet ↗</a>
+        <a href="https://vrngi.blogspot.com/" target="_blank" rel="noopener">Vinayaka Robotics ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> NGI. All rights reserved.</span>
+    <span>Public activity log: transparent, local-only interface events.</span>
+  </div>
+</footer>
+
+<button id="backTop" aria-label="Back to top">↑</button>
+
+<!-- Optional sign-in modal: public UI only; connect to your Appwrite project separately. -->
+<div class="overlay" id="authOverlay">
+  <div class="modal">
+    <div class="modal-head"><strong>NGI WORKSPACE ACCESS</strong><button class="close" id="authClose">✕</button></div>
+    <div class="modal-body">
+      <p>Workspace authentication belongs in your authenticated application. This public site does not store passwords.</p>
+      <div class="oauth">
+        <button id="openWorkspace">OPEN NGI WORKSPACE ↗</button>
+        <button id="openGithub">CONTINUE WITH GITHUB ↗</button>
+      </div>
+      <p class="auth-note">Connect Appwrite from a trusted application layer. Never place server API keys in this file.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========= Venture registry ========= */
+const HUB="https://ngiaio.blogspot.com/";
+const ventures=[
+["01","NithinX","Next-Gen EdTech & Premium Learning","technology","https://nithinxed.blogspot.com/"],
+["02","Nithin's Voice","Global Decentralized Tech Media","creative","https://nithinsvoicenews.blogspot.com/"],
+["03","VNN Agro","Precision Agriculture & Bio-Engineering","consumer","https://vnnngi.blogspot.com/"],
+["04","Nithin-ASI","Artificial Superintelligence & Custom Tokenizers","technology","https://nithin-asi.blogspot.com/"],
+["05","VRNA","Virtual Reality & Spatial OS","technology","https://vrnangi.blogspot.com/"],
+["06","Vinayaka Robotics","Autonomous Industrial Robotics","technology","https://vrngi.blogspot.com/"],
+["07","N-Meet","Ultra-low latency Encrypted Video Conferencing","technology","https://ngimeet.blogspot.com/"],
+["08","MMN Studio","Digital Media, Code Editor & CGI Production","creative","https://github.com/veeranithin/MMN-v1.0"],
+["09","Nithin AI","AI Fine-Tuning & Model Development","technology","https://github.com/veeranithin/nithin-ai-studio"],
+["10","Nithin AI Automation Agency","AI Automation & Business Systems","technology",HUB],
+["11","VN Foods","Food & Consumer Products","consumer",HUB],
+["12","Nithinesta","Organic Farm & Sustainable Agriculture","consumer",HUB],
+["13","Nithin LANG","Next-Generation Coding Language","technology","https://github.com/veeranithin/NithinLang"],
+["14","Nithin FILMS","Film Production & Visual Storytelling","creative",HUB],
+["15","Nithin ANIME CREATIONS","Anime, Animation & Creative IP","creative",HUB],
+["16","Nithin Sunday Delivery Services","Local Delivery & Logistics","consumer",HUB],
+["17","Nithin GAMES","Interactive Games & Digital Entertainment","creative","https://github.com/veeranithin/NithinVerse"],
+["18","N Tution of Excellence","Advanced Academic Learning & Mentoring","consumer",HUB]
+];
+
+/* ========= Public activity log =========
+   Local-only; no private analytics/tracking endpoint.
+*/
+let logging=true;
+const LOG_KEY="ngi-public-activity-v1";
+let logs=[];
+try{logs=JSON.parse(localStorage.getItem(LOG_KEY)||"[]")}catch{logs=[]}
+function now(){return new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false})}
+function saveLogs(){try{localStorage.setItem(LOG_KEY,JSON.stringify(logs.slice(-60)))}catch{}}
+function addLog(type,message){
+  if(!logging)return;
+  logs.push({time:now(),type,message});
+  if(logs.length>60)logs=logs.slice(-60);
+  saveLogs();renderLogs();
+}
+function renderLogs(){
+  const box=document.getElementById("logList");
+  box.innerHTML=logs.length?logs.slice().reverse().map(x=>`
+    <div class="log"><time>${x.time}</time><i></i><div><b>${x.type}</b><p>${x.message}</p></div></div>
+  `).join(""):`<div style="padding:22px;color:#687681;font-size:10px">No public events yet.</div>`;
+  document.getElementById("eventCount").textContent=logs.length;
+}
+if(!logs.length){
+  [
+    ["BOOT","NGI public site initialized"],
+    ["REGISTRY","18 venture records loaded"],
+    ["LINKS","Public destination layer ready"],
+    ["LOG","Transparent local activity stream enabled"]
+  ].forEach(x=>logs.push({time:now(),type:x[0],message:x[1]}));
+  saveLogs();
+}
+renderLogs();
+
+document.getElementById("clearLog").addEventListener("click",()=>{
+  logs=[];saveLogs();renderLogs();addLog("LOG","Activity stream cleared by the current browser user");
+});
+document.getElementById("logToggle").addEventListener("click",e=>{
+  logging=!logging;
+  e.currentTarget.textContent=logging?"PAUSE STREAM":"RESUME STREAM";
+  document.getElementById("logState").textContent=logging?"RUNNING":"PAUSED";
+  if(logging)addLog("LOG","Activity stream resumed");
+});
+
+function kindLabel(k){return k==="technology"?"Technology":k==="consumer"?"Consumer":"Creative"}
+function renderVentures(filter="all",query=""){
+  const q=query.trim().toLowerCase();
+  const grid=document.getElementById("ventureGrid");
+  grid.innerHTML=ventures.map(([num,name,desc,kind,url])=>{
+    const okay=(filter==="all"||kind===filter)&&((name+" "+desc+" "+kind).toLowerCase().includes(q));
+    return `<article class="venture ${okay?"":"hidden"}">
+      <div class="vtop"><span class="vnum">${num} / 18</span><span class="vkind">${kindLabel(kind)}</span></div>
+      <div><h3>${name}</h3><p>${desc}</p></div>
+      <a class="vlink" href="${url}" target="_blank" rel="noopener" data-event="${name} opened">Explore venture ↗</a>
+    </article>`;
+  }).join("");
+  document.querySelectorAll(".vlink").forEach(a=>a.addEventListener("click",()=>addLog("VENTURE",a.dataset.event)));
+}
+renderVentures();
+
+let currentFilter="all";
+document.querySelectorAll(".filter").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");currentFilter=btn.dataset.filter;
+    renderVentures(currentFilter,document.getElementById("ventureSearch").value);
+    addLog("FILTER","Venture filter changed to "+kindLabel(currentFilter));
+  });
+});
+document.getElementById("ventureSearch").addEventListener("input",e=>{
+  renderVentures(currentFilter,e.target.value);
+});
+
+document.querySelectorAll("[data-event]").forEach(el=>{
+  el.addEventListener("click",()=>addLog("NAV",el.dataset.event));
+});
+document.querySelectorAll("a[target=\"_blank\"]").forEach(el=>{
+  if(!el.dataset.event){
+    el.addEventListener("click",()=>addLog("LINK","Public link opened"));
+  }
+});
+
+/* Section visibility */
+const sectionObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting)addLog("SECTION",entry.target.id+" section entered");
+  });
+},{threshold:.2});
+["about","ecosystem","ventures","activity","public-log","architecture","links"].forEach(id=>{
+  const el=document.getElementById(id);if(el)sectionObserver.observe(el);
+});
+
+/* Reveal */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}
+  });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+/* Mobile nav */
+const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+/* Back-to-top + progress */
+const backTop=document.getElementById("backTop");
+window.addEventListener("scroll",()=>{
+  const y=window.scrollY||document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.documentElement.style.setProperty("--read",((h>0?y/h:0)*100)+"%");
+  backTop.classList.toggle("show",y>450);
+},{passive:true});
+backTop.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"});addLog("NAV","Back-to-top control used")});
+
+/* Small optional auth presentation */
+const authOverlay=document.getElementById("authOverlay");
+function openAuth(){authOverlay.classList.add("open");addLog("AUTH","Workspace access modal opened")}
+document.getElementById("authClose").addEventListener("click",()=>authOverlay.classList.remove("open"));
+document.getElementById("openGithub").addEventListener("click",()=>window.open("https://github.com/veeranithin","_blank","noopener"));
+document.getElementById("openWorkspace").addEventListener("click",()=>window.open("https://ngiaio.blogspot.com/","_blank","noopener"));
+
+
+/* ========= NGI V4 motion + interaction layer ========= */
+const navbar=document.querySelector(".navbar");
+const updateNav=()=>navbar&&navbar.classList.toggle("scrolled",(window.scrollY||0)>40);
+updateNav();window.addEventListener("scroll",updateNav,{passive:true});
+
+const glow=document.getElementById("cursorGlow");
+if(window.matchMedia("(pointer:fine)").matches&&glow){
+  window.addEventListener("pointermove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"},{passive:true});
+}
+
+document.querySelectorAll(".core-card,.arch-card,.log-panel,.public-note,.venture").forEach(card=>{
+  card.addEventListener("pointermove",e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty("--mx",(e.clientX-r.left)+"px");
+    card.style.setProperty("--my",(e.clientY-r.top)+"px");
+  });
+});
+
+if(window.matchMedia("(pointer:fine)").matches){
+  document.querySelectorAll(".venture").forEach(card=>{
+    card.addEventListener("pointermove",e=>{
+      const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`perspective(900px) rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*5).toFixed(2)}deg) translateY(-2px)`;
+    });
+    card.addEventListener("pointerleave",()=>card.style.transform="");
+  });
+  document.querySelectorAll(".btn,.nav-btn").forEach(el=>{
+    el.addEventListener("pointermove",e=>{
+      const r=el.getBoundingClientRect(),dx=(e.clientX-(r.left+r.width/2))/r.width*10,dy=(e.clientY-(r.top+r.height/2))/r.height*8;
+      el.style.transform=`translate(${dx.toFixed(1)}px,${dy.toFixed(1)}px)`;
+    });
+    el.addEventListener("pointerleave",()=>el.style.transform="");
+  });
+}
+
+document.querySelectorAll(".core-grid,.arch-grid").forEach(grid=>{
+  [...grid.children].forEach((el,i)=>el.style.transitionDelay=`${Math.min(i*70,280)}ms`);
+});
+
+function countUp(el,target,duration=900){
+  const start=performance.now();
+  function frame(now){
+    const p=Math.min((now-start)/duration,1),eased=1-Math.pow(1-p,3);
+    el.textContent=Math.round(target*eased);
+    if(p<1)requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+const countObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.querySelectorAll("[data-count]").forEach(el=>countUp(el,Number(el.dataset.count)));
+      countObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.7});
+const heroStats=document.querySelector(".hero-stats");if(heroStats)countObserver.observe(heroStats);
+
+if(window.matchMedia("(pointer:fine)").matches){
+  const orb=document.querySelector(".hero-orb");
+  window.addEventListener("pointermove",e=>{
+    if(!orb||e.clientY>window.innerHeight*1.2)return;
+    const px=(e.clientX/window.innerWidth-.5)*14,py=(e.clientY/window.innerHeight-.5)*10;
+    orb.style.transform=`translate(${px}px,${py}px)`;
+  },{passive:true});
+}
+
+let heartbeat=0;
+setInterval(()=>{
+  heartbeat++;
+  if(heartbeat%2===0&&typeof addLog==="function"&&logging)addLog("PULSE","NGI interface heartbeat · local-only");
+},14000);
+
+const navAnchors=[...document.querySelectorAll(".nav-links a[href^='#']")];
+const sectionMap=navAnchors.map(a=>({a,el:document.querySelector(a.getAttribute("href"))})).filter(x=>x.el);
+const activeObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      navAnchors.forEach(a=>a.classList.remove("active"));
+      const hit=sectionMap.find(x=>x.el===entry.target);
+      if(hit)hit.a.classList.add("active");
+    }
+  });
+},{rootMargin:"-25% 0px -60% 0px",threshold:0});
+sectionMap.forEach(x=>activeObserver.observe(x.el));
+
+/* Year */
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
